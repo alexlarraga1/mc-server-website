@@ -1,1 +1,246 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  overflow-x: hidden; }
+
+body {
+  font-family: "Open Sans", Helvetica;
+  line-height: 1.7;
+  color: gray;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+}
+::-moz-selection {
+  background: #00AA00;
+  color: #fff;
+}
+
+::selection {
+  background: #00AA00;
+  color: #fff;
+}
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+a:hover {
+  text-decoration: none;
+}
+
+hr {
+  max-width: 420px;
+  color: #718093;
+}
+
+/*MARGINS*/
+@media (min-width: 992px){
+  .mt-lg-5, .my-lg-5 {
+    margin-top: 3rem!important;
+  }
+}
+
+/*NAVBAR*/
+.navbar {
+  transition: all 0.4s;
+}
+
+.navbar .nav-link {
+  color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: #fff;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+  color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+  color: #555;
+  text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+  color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+  .navbar {
+    background: #fff;
+  }
+
+  .navbar .navbar-brand, .navbar .nav-link {
+    color: #555;
+  }
+}
+
+/* HEADER */
+.site-cover, .site-cover > .container > .row{
+  min-height: 600px;
+  height: calc(100vh);
+}
+
+.site-cover{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position: center center;
+  background-image: url(assets/img/background.png);
+}
+.site-cover.overlay:before{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/*    STAFF     */
+.staff{
+  margin: 10px;
+  text-align: center;
+  padding: 66px 0;
+}
+
+.staff .stafflist{
+  margin: 0 auto;
+  padding-top: 66px;
+}
+
+.staff .staffblock{
+  transform: none;
+  transition: all .2s ease-in;
+}
+
+.staff .staffblock img{
+  max-height: 360px;
+}
+
+.staff h2 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+
+.staff p {
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+
+/*    Footer     */
+footer, footer a{
+  background-color: black;
+  color: #BBB;
+}
+.footer {
+  max-width: 1280px;
+  margin: 0 auto;
+  float: none;
+  padding: 66px 0;
+}
+
+
+.copyright{
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+/*--------------------------------------------------
+    [Back To Top Theme Button]
+----------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: inline-block;
+  z-index: 9;
+  width: 40px;
+  height: 40px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #515769;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px;
+  -webkit-transform: translate3d(0, 50px, 0);
+  -moz-transform: translate3d(0, 50px, 0);
+  transform: translate3d(0, 50px, 0);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.back-to-top:hover {
+  color: #fff;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.back-to-top:focus, .back-to-top:hover {
+  text-decoration: none;
+}
+
+/* The Button Becomes Visible */
+.back-to-top.back-to-top-is-visible {
+  visibility: visible;
+  opacity: .6;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+.back-to-top.back-to-top-is-visible:hover {
+  opacity: 1;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+/* If the user keeps scrolling down, the button is out of focus and becomes less visible */
+.back-to-top.back-to-top-fade-out {
+  opacity: .4;
+}
+
+.back-to-top.back-to-top-fade-out:hover {
+  opacity: 1;
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
