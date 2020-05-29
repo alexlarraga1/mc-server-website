@@ -11,6 +11,15 @@ body {
 
 h1,h2,h3,h4,h5,h6{
   font-weight: bold;
+  font-family: "Open Sans", Helvetica ;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: "Open Sans", Helvetica;
+  margin: 0;
+  padding: 0;
 }
 ::-moz-selection {
   background: #00AA00;
@@ -36,11 +45,40 @@ hr {
   color: #718093;
 }
 
+
+
 /*MARGINS*/
 @media (min-width: 992px){
   .mt-lg-5, .my-lg-5 {
     margin-top: 3rem!important;
   }
+}
+
+/* SECTION IMAGE ADD A IMAGE AS BACKGROUND-IMAGE */
+.parallax {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-image{
+  padding: 75px 0 75px 0;
+  text-align: center;
+}
+
+.section-image h1{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
+.section-image h2{
+  margin-top: 5px;
+  font-size: 20px;
+  color: white;
 }
 
 /*NAVBAR*/
@@ -118,6 +156,42 @@ hr {
   background-color: rgba(0,0,0,0.4);
 }
 
+/* ============ ABOUT =============== */
+.about {
+  margin: 10px;
+  text-align: center;
+  padding: 66px 0;
+
+}
+
+.about h1{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.about h2 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.about p{
+  margin-top: 3px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.about .features{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 66px;
+}
+.about .feature {
+  font-size: 60px;
+  margin-top: 17px;
+}
+
 /*    STAFF     */
 .staff{
   margin: 10px;
@@ -150,6 +224,45 @@ hr {
   font-size: 18px;
 }
 
+/*       Contacto          */
+.contact{
+  margin: 10px;
+  text-align: center;
+  padding: 66px 0;
+}
+
+.contact h1{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.contact p {
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+.contact .contact-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 66px;
+  padding-bottom: 66px;
+}
+
+.contact-section .col-md{
+  transform: none;
+  transition: all .2s ease-in;
+}
+
+.contact h2{
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.contact-section .col-md a{
+  font-weight: 700;
+}
 
 /*    Footer     */
 footer, footer a{
@@ -243,4 +356,22 @@ footer, footer a{
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
+}
+
+@media screen and (max-width: 799px){
+  .res-img-sm {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .res-img-sm {
+    height: 110px;
+  }
+}
+
+
+.icon-forge:before {
+  fill: gray;
+  content: url(assets/img/icon/forge.svg);
 }
